@@ -1,5 +1,7 @@
 package com.ulanapp.network.client
 
+import com.ulanapp.network.responses.AccessTokenResponse
+import com.ulanapp.network.responses.BonusInfoResponse
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
@@ -13,9 +15,9 @@ interface APIService {
 
     // метод для логина
     @POST(ACCESS_TOKEN)
-    suspend fun doAccessToken(): Any
+    suspend fun doAccessToken(): AccessTokenResponse
 
     // метод для получения списка платежей
     @GET(GENERAL_INFO)
-    suspend fun getGeneralInfo(@Query("AccessToken") accessToken: String): Any
+    suspend fun getGeneralInfo(@Query("AccessToken") accessToken: String): BonusInfoResponse
 }
