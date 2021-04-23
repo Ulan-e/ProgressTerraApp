@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="count_bonus">300 бонусов</string>
+    <string name="expired_bonus">29.03 сгорит</string>
+    <string name="remaining_bonus">250 бонусов</string>
+</resources>
