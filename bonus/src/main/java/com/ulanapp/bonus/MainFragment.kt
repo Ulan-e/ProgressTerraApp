@@ -1,19 +1,22 @@
-package com.ulanapp.views
+package com.ulanapp.bonus
 
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.ulanapp.network.actions.APIAccessTokenActionsImpl
-import kotlinx.coroutines.launch
+import com.ulanapp.bonus.di.BonusInfoComponent
 
 class MainFragment: Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        (requireContext() as BonusInfoComponent)
+                .inject(this)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

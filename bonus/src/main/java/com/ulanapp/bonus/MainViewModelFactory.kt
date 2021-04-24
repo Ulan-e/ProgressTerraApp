@@ -1,4 +1,4 @@
-package com.ulanapp.views
+package com.ulanapp.bonus
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -1,6 +1,5 @@
-package com.ulanapp.views
+package com.ulanapp.bonus
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ulanapp.network.actions.APIAccessTokenActions
