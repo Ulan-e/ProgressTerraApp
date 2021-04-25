@@ -29,10 +29,12 @@ class BonusInfoViewModel(
                 val token = async(Dispatchers.IO) {
                     apiAccessTokenActions.getToken(requestBody).accessToken
                 }.await()
+                Timber.d("Token $token")
 
                 // запрашиваем инфу о бонусе по токену
                 val responseData = apiBonusInfoActions.getGeneralInfo(token)
                 bonusInfo.value = responseData.data
+                Timber.d("BonusData $responseData")
             }
         }catch (e: Exception){
             Timber.d(e.localizedMessage)

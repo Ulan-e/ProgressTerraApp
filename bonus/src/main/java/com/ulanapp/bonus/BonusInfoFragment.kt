@@ -76,8 +76,8 @@ class BonusInfoFragment : Fragment() {
             }
             true
         }
-        val toolbarlayout = view.findViewById<CollapsingToolbarLayout>(R.id.toolbarlayout)
-        toolbarlayout.isTitleEnabled = false
+        val mainToolbar = view.findViewById<CollapsingToolbarLayout>(R.id.toolbarlayout)
+        mainToolbar.isTitleEnabled = false
     }
 
     // создание RequestBody для API запроса
