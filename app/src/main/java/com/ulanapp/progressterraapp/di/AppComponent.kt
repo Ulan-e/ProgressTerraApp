@@ -10,8 +10,3 @@ interface AppComponent {
 
     fun inject(activity: MainActivity)
 }
-
-interface AppComponentProvider{
-
-    fun getAppComponent() : AppComponent
-}

@@ -1,8 +1,10 @@
 package com.ulanapp.network.actions
 
 import com.ulanapp.network.responses.AccessTokenResponse
+import com.ulanapp.network.responses.RequestBody
 
 interface APIAccessTokenActions {
 
-    suspend fun generateToken() : AccessTokenResponse
+    // получение токена
+    suspend fun getToken(requestBody: RequestBody) : AccessTokenResponse
 }

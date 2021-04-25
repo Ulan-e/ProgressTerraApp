@@ -1,15 +1,16 @@
 package com.ulanapp.network.responses
 
 data class AccessTokenResponse(
-    var result: Result? = null,
-    var accessToken: String? = null
-)
+        val result: Result,
+        val accessToken: String
+) {
 
-data class Result(
-    val status: Int,
-    val message: String,
-    val messageDev: String,
-    val codeResult: Int,
-    val duration: Int,
-    val idLog: String
-)
+    data class Result(
+            val status: Int,
+            val message: String,
+            val messageDev: String,
+            val codeResult: Int,
+            val duration: Int,
+            val idLog: String
+    )
+}

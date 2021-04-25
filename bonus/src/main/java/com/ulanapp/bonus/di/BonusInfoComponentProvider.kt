@@ -1,6 +1,6 @@
 package com.ulanapp.bonus.di
 
-interface BonusNetworkProvider {
+interface BonusInfoComponentProvider {
 
     fun provideBonusInfoComponent() : BonusInfoComponent
 }

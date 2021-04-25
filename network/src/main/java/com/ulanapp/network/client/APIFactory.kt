@@ -1,9 +1,11 @@
 package com.ulanapp.network.client
 
+import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 object APIFactory {
@@ -26,9 +28,14 @@ object APIFactory {
             })
         }
 
+        val gson = GsonBuilder()
+                .setLenient()
+                .registerTypeAdapter(Date::class.java, DateDeserializer() )
+                .create()
+
         val retrofit = Retrofit.Builder()
             .client(httpclient.build())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .baseUrl(BASE_URL)
             .build()
         return retrofit.create(APIService::class.java);

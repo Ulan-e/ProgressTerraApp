@@ -1,22 +1,25 @@
 package com.ulanapp.network.responses
 
+import java.util.*
+
 data class BonusInfoResponse(
-    var resultOperation: ResultOperation? = null,
-    var data: Data? = null
-)
+        val resultOperation: ResultOperation,
+        val data: Data
+) {
 
-data class ResultOperation(
-    var status: Int? = null,
-    var message: String? = null,
-    var messageDev: String? = null,
-    var codeResult: Int? = null,
-    var duration: Int? = null,
-    var idLog: String? = null
-)
+    data class ResultOperation(
+            val status: Int,
+            val message: String,
+            val messageDev: String,
+            val codeResult: Int,
+            val duration: Int,
+            val idLog: String
+    )
 
-data class Data(
-    var typeBonusName: String? = null,
-    var currentQuantity: Int? = null,
-    var forBurningQuantity: Int? = null,
-    var dateBurning: String? = null
-)
+    data class Data(
+            val typeBonusName: String,
+            val currentQuantity: Int,
+            val forBurningQuantity: Int,
+            val dateBurning: Date
+    )
+}
