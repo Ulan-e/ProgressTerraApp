@@ -4,7 +4,6 @@
     android:height="35dp"
     android:viewportWidth="35"
     android:viewportHeight="35">
-
     <path
         android:fillColor="#00000000"
         android:strokeColor="#D4343F"
