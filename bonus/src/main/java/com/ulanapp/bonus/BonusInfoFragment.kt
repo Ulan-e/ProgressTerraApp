@@ -1,5 +1,6 @@
 package com.ulanapp.bonus
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -95,9 +96,14 @@ class BonusInfoFragment : Fragment() {
 
     // показываем информацию о бонусе
     private fun showBonusInfo(bonusInfo: BonusInfoResponse.Data) {
+        progress_bar.visibility = View.GONE
         tvAmountBonus.text = getString(R.string.bonus, bonusInfo.currentQuantity.toString())
         tvRemainBonus.text = getString(R.string.bonus, bonusInfo.forBurningQuantity.toString())
         val month = bonusInfo.dateBurning.convertDateToDayMonth()
         tvBonusExpiresDate.text = getString(R.string.expired, month)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            tvBonusExpiresDate.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0, R.drawable.ic_flame, 0)
+        }
     }
 }
