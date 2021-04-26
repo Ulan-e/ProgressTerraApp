@@ -60,7 +60,7 @@ class BonusInfoFragment : Fragment() {
 
         // получаем информацию о бонусе
         model.bonusInfo.observe(viewLifecycleOwner, Observer {
-            setBonusInfo(it)
+            showBonusInfo(it)
         })
     }
 
@@ -94,10 +94,10 @@ class BonusInfoFragment : Fragment() {
     }
 
     // показываем информацию о бонусе
-    private fun setBonusInfo(bonusInfo: BonusInfoResponse.Data) {
+    private fun showBonusInfo(bonusInfo: BonusInfoResponse.Data) {
         tvAmountBonus.text = getString(R.string.bonus, bonusInfo.currentQuantity.toString())
         tvRemainBonus.text = getString(R.string.bonus, bonusInfo.forBurningQuantity.toString())
         val month = bonusInfo.dateBurning.convertDateToDayMonth()
-        tvBonusExpiresDate.text = getString(R.string.bonus, month)
+        tvBonusExpiresDate.text = getString(R.string.expired, month)
     }
 }
