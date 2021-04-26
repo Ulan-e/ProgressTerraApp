@@ -1,4 +1,4 @@
-include ':views'
+include ':bonus'
 include ':network'
 include ':app'
 rootProject.name = "ProgressTerraApp"

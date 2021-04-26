@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="count_bonus">300 бонусов</string>
+    <string name="expired">%1$s сгорит</string>
+    <string name="remaining_bonus">%1$s бонусов</string>
+    <string name="bonus">%1$s бонусов</string>
+    <string name="logo">ЛОГОТИП</string>
+
+    <string name="client_id">2c44d8c2-c89a-472e-aab3-9a8a29142315</string>
+    <string name="device_id">7db72635-fd0a-46b9-813b-1627e3aa02ea</string>
+    <string name="device">device</string>
+</resources>

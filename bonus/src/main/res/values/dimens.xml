@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_148dp">148dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="elevation_5">5dp</dimen>
+    <dimen name="corner_radius_20dp">20dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="text_size_18sp">24sp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="margin_19dp">19dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+</resources>
